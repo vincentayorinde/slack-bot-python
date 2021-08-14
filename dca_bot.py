@@ -21,9 +21,12 @@ class NotifySlack:
         status: {status}
         ''')
 
+    def text(self, message):
+        client.chat_postMessage(channel=channel, text=message)
+
 
 # sample call
 
 slack = NotifySlack();
-
-slack.recieve_btc('New Receive BTC Issue', '0.000459945', '90.5', 'dfsadfjlkasdjfklajsdlkjf', 'vinay@gmail.com', 'Aug. 13, 2021', 'pending')
+slack.text('Test again')
+# slack.recieve_btc('New Receive BTC Issue', '0.000459945', '90.5', 'dfsadfjlkasdjfklajsdlkjf', 'vinay@gmail.com', 'Aug. 13, 2021', 'pending')
